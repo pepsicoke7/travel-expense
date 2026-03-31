@@ -1,0 +1,96 @@
+/* ============================================================
+   旅游记账应用 - 全局基础样式
+   包含 CSS 变量、全局重置、响应式容器和触控区域设置
+   ============================================================ */
+
+:root {
+  /* 主色调 */
+  --primary: #4f46e5;
+  --primary-light: #818cf8;
+  --primary-bg: rgba(79, 70, 229, 0.08);
+
+  /* 语义色 */
+  --danger: #ef4444;
+  --danger-bg: #fef2f2;
+  --warning: #f59e0b;
+  --warning-bg: #fffbeb;
+  --success: #10b981;
+  --success-bg: #ecfdf5;
+
+  /* 文字色 */
+  --text: #1f2937;
+  --text-secondary: #6b7280;
+  --text-light: #9ca3af;
+
+  /* 背景色 */
+  --bg: #f9fafb;
+  --bg-white: #ffffff;
+
+  /* 边框与阴影 */
+  --border: #e5e7eb;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 24px rgba(0, 0, 0, 0.15);
+
+  /* 圆角 */
+  --radius: 6px;
+  --radius-lg: 8px;
+
+  /* 字体 */
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 响应式容器 */
+#root {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* 确保所有交互元素最小触控区域 44x44 像素（需求 15.3） */
+button,
+a,
+input,
+select,
+textarea {
+  min-height: 44px;
+}
+
+button,
+a {
+  min-width: 44px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 链接默认样式 */
+a {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* 移动端响应式调整（需求 15.1） */
+@media (max-width: 767px) {
+  #root {
+    padding: 12px;
+  }
+}

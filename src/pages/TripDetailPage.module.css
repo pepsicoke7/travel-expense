@@ -1,0 +1,305 @@
+/* 旅行详情页样式 */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 页面头部 */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  min-height: 44px;
+  min-width: 44px;
+  transition: background 0.15s;
+}
+
+.backLink:hover {
+  background: var(--border);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* 旅行基本信息卡片 */
+.infoCard {
+  padding: 20px;
+  background: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tripMeta {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.totalExpense {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* 操作按钮区域 */
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.actionBtn:hover {
+  background: var(--primary-light);
+}
+
+.secondaryBtn {
+  background: var(--bg-white);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.secondaryBtn:hover {
+  background: var(--bg);
+}
+
+/* 预算区域 */
+.budgetSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.noBudget {
+  padding: 16px;
+  background: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.noBudgetText {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* 预算设置表单 */
+.budgetForm {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.budgetInput {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  width: 160px;
+  color: var(--text);
+}
+
+.budgetSubmitBtn {
+  padding: 8px 16px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
+  transition: background 0.2s;
+}
+
+.budgetSubmitBtn:hover {
+  background: var(--primary-light);
+}
+
+.budgetError {
+  font-size: 0.8rem;
+  color: var(--danger);
+}
+
+/* 支出列表区域 */
+.expenseSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.expenseList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.expenseCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.expenseInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.expenseTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.expenseAmount {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.expenseCategory {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  background: var(--bg);
+  border-radius: 4px;
+  color: var(--text-secondary);
+}
+
+.expenseBottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.expenseNote {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+/* 支出操作按钮 */
+.expenseActions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.editBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  background: var(--bg-white);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  min-height: 44px;
+  min-width: 44px;
+  transition: background 0.15s;
+}
+
+.editBtn:hover {
+  background: var(--bg);
+}
+
+.deleteBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  background: var(--bg-white);
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
+  transition: background 0.15s;
+}
+
+.deleteBtn:hover {
+  background: #fef2f2;
+}
+
+/* 响应式：移动端 */
+@media (max-width: 767px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  .actionBtn {
+    justify-content: center;
+  }
+
+  .expenseCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .expenseActions {
+    align-self: flex-end;
+  }
+
+  .noBudget {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .budgetForm {
+    flex-wrap: wrap;
+  }
+}

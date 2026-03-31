@@ -1,0 +1,91 @@
+/* 预算进度条样式 */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.amounts {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.spent {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.budget {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.trackWrapper {
+  position: relative;
+  height: 12px;
+  background: var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.track {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+/* 根据预算状态级别设置进度条颜色 */
+.trackNormal {
+  background: var(--success);
+}
+
+.trackWarning {
+  background: var(--warning);
+}
+
+.trackExceeded {
+  background: var(--danger);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.remaining {
+  font-weight: 500;
+}
+
+/* 剩余金额为负数时显示红色 */
+.remainingExceeded {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+/* 移动端响应式 */
+@media (max-width: 767px) {
+  .container {
+    padding: 10px 12px;
+  }
+
+  .spent {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,91 @@
+/* 确认对话框样式 */
+
+/* 遮罩层 */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* 对话框容器 */
+.dialog {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* 标题 */
+.title {
+  margin: 0 0 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* 消息内容 */
+.message {
+  margin: 0 0 20px;
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* 按钮区域 */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* 按钮基础样式 */
+.btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  transition: opacity 0.15s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* 取消按钮：灰色 */
+.cancelBtn {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* 确认按钮：红色（危险操作） */
+.confirmBtn {
+  background: #ef4444;
+  color: #fff;
+}
+
+/* 移动端响应式 */
+@media (max-width: 767px) {
+  .dialog {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

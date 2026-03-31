@@ -1,0 +1,46 @@
+/* 分类支出饼图样式 */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.chartWrapper {
+  width: 100%;
+  min-height: 300px;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 16px;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  background: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+/* 移动端响应式 */
+@media (max-width: 767px) {
+  .container {
+    padding: 12px;
+  }
+
+  .chartWrapper {
+    min-height: 250px;
+  }
+}

@@ -1,0 +1,178 @@
+/* 旅行列表页样式 */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 页面头部：标题 + 创建按钮 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.createBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  min-height: 44px;
+  min-width: 44px;
+  transition: background 0.2s;
+}
+
+.createBtn:hover {
+  background: var(--primary-light);
+}
+
+/* 总览统计区域 */
+.statsBar {
+  display: flex;
+  gap: 16px;
+}
+
+.statCard {
+  flex: 1;
+  padding: 16px;
+  background: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.statValue {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* 排序控制 */
+.sortBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.sortSelect {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: var(--text);
+  background: var(--bg-white);
+  min-height: 44px;
+}
+
+.sortBtn {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-white);
+  font-size: 0.875rem;
+  color: var(--text);
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
+  transition: background 0.15s;
+}
+
+.sortBtn:hover {
+  background: var(--bg);
+}
+
+/* 旅行列表 */
+.tripList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tripCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.15s;
+}
+
+.tripCard:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.tripInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tripName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.tripMeta {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.tripAmount {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+/* 响应式：移动端 */
+@media (max-width: 767px) {
+  .statsBar {
+    flex-direction: column;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .createBtn {
+    justify-content: center;
+  }
+
+  .sortBar {
+    flex-wrap: wrap;
+  }
+
+  .tripCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

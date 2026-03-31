@@ -1,0 +1,58 @@
+/* 预算警告提示样式 */
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* 80% 警告状态：黄色背景 */
+.warning {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+}
+
+/* 即将超支状态：橙色背景 */
+.willExceed {
+  background: #ffedd5;
+  color: #9a3412;
+  border: 1px solid #fdba74;
+}
+
+/* 已超支状态：红色背景 */
+.exceeded {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+.icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.content {
+  flex: 1;
+}
+
+.message {
+  font-weight: 500;
+}
+
+.overAmount {
+  display: block;
+  margin-top: 2px;
+  font-weight: 600;
+}
+
+/* 移动端响应式 */
+@media (max-width: 767px) {
+  .alert {
+    padding: 8px 12px;
+  }
+}

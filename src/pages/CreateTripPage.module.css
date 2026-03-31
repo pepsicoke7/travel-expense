@@ -1,0 +1,49 @@
+/* 创建旅行页样式 */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  min-height: 44px;
+  min-width: 44px;
+  transition: background 0.15s;
+}
+
+.backLink:hover {
+  background: var(--border);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.formCard {
+  padding: 24px;
+  background: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 767px) {
+  .formCard {
+    padding: 16px;
+  }
+}
